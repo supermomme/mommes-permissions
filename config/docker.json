@@ -1,0 +1,4 @@
+{
+  "mongodb": "mongodb://mongodb:27017/feather_mommes_permissions",
+  "autoSessionSuppress": false
+}
