@@ -1,7 +1,8 @@
 /* String type
 
 normal:               service:action:idGroup:field1:field2:field3.nested.with.dots
-exception in created: service:action:field1:field2:field3.nested.withdots
+exception in create:  service:create:field1:field2:field3.nested.withdots
+exception in remove:  service:remove:idGroup
 
 
 */
@@ -26,23 +27,23 @@ module.exports = [
       'login:read:all:*',
       'login:patch:all:*',
       'login:create:*',
-      'login:remove:all:*',
+      'login:remove:all',
       'scenario:read:all:*',
       'scenario:patch:all:*',
       'scenario:create:*',
-      'scenario:remove:all:*',
+      'scenario:remove:all',
       'session:read:all:*',
       'session:patch:all:*',
       'session:create:*',
-      'session:remove:all:*',
+      'session:remove:all',
       'role:read:all:*',
       'role:patch:all:*',
       'role:create:*',
-      'role:remove:all:*',
+      'role:remove:all',
       'account:read:all:*',
       'account:patch:all:*',
       'account:create:*',
-      'account:remove:all:*',
+      'account:remove:all',
     ]
   }
 ];

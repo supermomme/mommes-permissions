@@ -25,8 +25,12 @@ module.exports = function (app) {
         const splitted = perString.split(':');
         const service = splitted[0];
         const action = splitted[1];
-        const idGroup = action === 'create' ? null : splitted[2];
-        const fields = action === 'create' ? splitted.slice(2) : splitted.slice(3);
+        let idGroup = null;
+        if (action !== 'create') idGroup = splitted[2];
+        let fields = null;
+        if (action === 'create') fields = splitted.slice(2);
+        else if (action !== 'remove') fields = splitted.slice(3);
+
         return {
           service,
           action,

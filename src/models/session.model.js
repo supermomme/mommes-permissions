@@ -17,7 +17,6 @@ module.exports = function (app) {
       idGroup: { type: String },
       fields: [{ type: String }],
     }],
-    jwtExpiresAt: { type: Date },
   }, {
     minimize: false,
     timestamps: true
